@@ -1,0 +1,258 @@
+﻿<Window x:Class="V_Agent_pick.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:V_Agent_pick"
+        mc:Ignorable="d"
+        Title="Valorant Random Agent" Height="450" Width="800" WindowStyle="SingleBorderWindow" Background="#FFC7C7C7"
+        Icon="pack://siteoforigin:,,,/icon.png">
+
+    <Grid AllowDrop="True">
+        <!--Left-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--Top-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--ELEMENTS-->
+        <Button Grid.Column="0" Grid.Row="1" Click="btnRandomize">Randomize</Button>
+
+        <Image Grid.Column="0" Grid.Row="0" Name="imgAgent"/>
+
+        <ListBox Grid.RowSpan="2" Grid.Column="1" Background="#FFC7C7C7">
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox VerticalAlignment="Center" Name="Sentinels" Checked="cbSentinels" Unchecked="cbSentinels"></CheckBox>
+                    <Label></Label>
+                    <Image Source="pack://siteoforigin:,,,/Types/Sentinel.png" Width="20" Stretch="Uniform"/>
+                    <Label>Sentinels</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Cypher"></CheckBox>
+                    <Label>Cypher</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Deadlock"></CheckBox>
+                    <Label>Deadlock</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Killjoy"></CheckBox>
+                    <Label>Killjoy</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Sage"></CheckBox>
+                    <Label>Sage</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Chamber"></CheckBox>
+                    <Label>Chamber</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox VerticalAlignment="Center" Name="Initiators" Checked="cbInitiators" Unchecked="cbInitiators"></CheckBox>
+                    <Label></Label>
+                    <Image Source="pack://siteoforigin:,,,/Types/Initiator.png" Width="20"/>
+                    <Label>Initiators</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Fade"></CheckBox>
+                    <Label>Fade</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Kayo"></CheckBox>
+                    <Label>Kayo</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Skye"></CheckBox>
+                    <Label>Skye</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Sova"></CheckBox>
+                    <Label>Sova</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Breach"></CheckBox>
+                    <Label>Breach</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Gekko"></CheckBox>
+                    <Label>Gekko</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox VerticalAlignment="Center" Name="Duelists" Checked="cbDuelists" Unchecked="cbDuelists"></CheckBox>
+                    <Label></Label>
+                    <Image Source="pack://siteoforigin:,,,/Types/Duelist.png" Width="20"/>
+                    <Label>Duelists</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Iso"></CheckBox>
+                    <Label>Iso</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Neon"></CheckBox>
+                    <Label>Neon</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Raze"></CheckBox>
+                    <Label>Raze</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Jett"></CheckBox>
+                    <Label>Jett</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Phoenix"></CheckBox>
+                    <Label>Phoenix</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Reyna"></CheckBox>
+                    <Label>Reyna</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Yoru"></CheckBox>
+                    <Label>Yoru</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox VerticalAlignment="Center" Name="Controller" Checked="cbController" Unchecked="cbController"></CheckBox>
+                    <Label></Label>
+                    <Image Source="pack://siteoforigin:,,,/Types/Controller.png" Width="20"/>
+                    <Label>Controller</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Harbor"></CheckBox>
+                    <Label>Harbor</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Astra"></CheckBox>
+                    <Label>Astra</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Brimstone"></CheckBox>
+                    <Label>Brimstone</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Omen"></CheckBox>
+                    <Label>Omen</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <Label></Label>
+                    <CheckBox VerticalAlignment="Center" Name="Viper"></CheckBox>
+                    <Label>Viper</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+        </ListBox>
+    </Grid>
+</Window>
