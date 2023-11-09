@@ -35,7 +35,6 @@ namespace V_Agent_pick
             Killjoy.IsChecked = newVal;
             Sage.IsChecked = newVal;
             Chamber.IsChecked = newVal;
-            btnSubmit(sender, e);
         }
 
         private void cbInitiators(object sender, RoutedEventArgs e)
@@ -47,7 +46,6 @@ namespace V_Agent_pick
             Sova.IsChecked = newVal;
             Breach.IsChecked = newVal;
             Gekko.IsChecked = newVal;
-            btnSubmit(sender, e);
         }
 
         private void cbDuelists(object sender, RoutedEventArgs e)
@@ -60,7 +58,6 @@ namespace V_Agent_pick
             Phoenix.IsChecked = newVal;
             Reyna.IsChecked = newVal;
             Yoru.IsChecked = newVal;
-            btnSubmit(sender, e);
         }
 
         private void cbController(object sender, RoutedEventArgs e)
@@ -71,7 +68,6 @@ namespace V_Agent_pick
             Brimstone.IsChecked = newVal;
             Omen.IsChecked = newVal;
             Viper.IsChecked = newVal;
-            btnSubmit(sender, e);
         }
 
         private void btnSubmit(object sender, RoutedEventArgs e)
@@ -126,10 +122,14 @@ namespace V_Agent_pick
         }
         private void btnRandomize(object sender, RoutedEventArgs e)
         {
-            Random random = new Random();
-            int selection = random.Next(0, agents.Length);
-            Uri uri = new Uri(String.Format("pack://siteoforigin:,,,/Agents/{0}",agents[selection]) + ".png");
-            imgAgent.Source = new BitmapImage(uri);
+            btnSubmit(sender, e);
+            if (agents.Length > 0)
+            {
+                Random random = new Random();
+                int selection = random.Next(0, agents.Length);
+                Uri uri = new Uri(String.Format("pack://siteoforigin:,,,/Agents/{0}.png",agents[selection]));
+                imgAgent.Source = new BitmapImage(uri);
+            }
         }
     }
 }

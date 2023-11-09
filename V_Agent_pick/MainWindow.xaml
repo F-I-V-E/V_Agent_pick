@@ -22,7 +22,7 @@
         </Grid.RowDefinitions>
 
         <!--ELEMENTS-->
-        <Button Grid.Column="0" Grid.Row="1" Click="btnRandomize">Randomize</Button>
+        <Button Grid.Column="0" Grid.Row="1" Click="btnRandomize" Background="#FFC7C7C7">Randomize</Button>
 
         <Image Grid.Column="0" Grid.Row="0" Name="imgAgent"/>
 
