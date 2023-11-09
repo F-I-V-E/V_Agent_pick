@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:V_Agent_pick"
         mc:Ignorable="d"
         Title="Valorant Random Agent" Height="450" Width="800" WindowStyle="SingleBorderWindow" Background="#FFC7C7C7"
-        Icon="pack://siteoforigin:,,,/icon.png">
+        Icon="pack://application:,,,/images/icon.png">
 
     <Grid AllowDrop="True">
         <!--Left-->
@@ -29,9 +29,9 @@
         <ListBox Grid.RowSpan="2" Grid.Column="1" Background="#FFC7C7C7">
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox VerticalAlignment="Center" Name="Sentinels" Checked="cbSentinels" Unchecked="cbSentinels"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Sentinels" Checked="cbSentinels" Unchecked="cbSentinels" IsChecked="True"></CheckBox>
                     <Label></Label>
-                    <Image Source="pack://siteoforigin:,,,/Types/Sentinel.png" Width="20" Stretch="Uniform"/>
+                    <Image Source="pack://application:,,,/images/Types/Sentinel.png" Width="20" Stretch="Uniform"/>
                     <Label>Sentinels</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -39,7 +39,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Cypher"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Cypher"  IsChecked="True"></CheckBox>
                     <Label>Cypher</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -47,7 +47,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Deadlock"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Deadlock" IsChecked="True"></CheckBox>
                     <Label>Deadlock</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -55,7 +55,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Killjoy"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Killjoy" IsChecked="True"></CheckBox>
                     <Label>Killjoy</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -63,7 +63,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Sage"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Sage" IsChecked="True"></CheckBox>
                     <Label>Sage</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -71,7 +71,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Chamber"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Chamber" IsChecked="True"></CheckBox>
                     <Label>Chamber</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -80,9 +80,9 @@
 
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox VerticalAlignment="Center" Name="Initiators" Checked="cbInitiators" Unchecked="cbInitiators"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Initiators" Checked="cbInitiators" Unchecked="cbInitiators" IsChecked="True"></CheckBox>
                     <Label></Label>
-                    <Image Source="pack://siteoforigin:,,,/Types/Initiator.png" Width="20"/>
+                    <Image Source="pack://application:,,,/images/Types/Initiator.png" Width="20"/>
                     <Label>Initiators</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -90,7 +90,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Fade"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Fade" IsChecked="True"></CheckBox>
                     <Label>Fade</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -98,7 +98,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Kayo"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Kayo" IsChecked="True"></CheckBox>
                     <Label>Kayo</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -106,7 +106,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Skye"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Skye" IsChecked="True"></CheckBox>
                     <Label>Skye</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -114,7 +114,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Sova"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Sova" IsChecked="True"></CheckBox>
                     <Label>Sova</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -122,7 +122,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Breach"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Breach" IsChecked="True"></CheckBox>
                     <Label>Breach</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -130,7 +130,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Gekko"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Gekko" IsChecked="True"></CheckBox>
                     <Label>Gekko</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -139,9 +139,9 @@
 
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox VerticalAlignment="Center" Name="Duelists" Checked="cbDuelists" Unchecked="cbDuelists"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Duelists" Checked="cbDuelists" Unchecked="cbDuelists" IsChecked="True"></CheckBox>
                     <Label></Label>
-                    <Image Source="pack://siteoforigin:,,,/Types/Duelist.png" Width="20"/>
+                    <Image Source="pack://application:,,,/images/Types/Duelist.png" Width="20"/>
                     <Label>Duelists</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -149,7 +149,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Iso"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Iso" IsChecked="True"></CheckBox>
                     <Label>Iso</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -157,7 +157,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Neon"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Neon" IsChecked="True"></CheckBox>
                     <Label>Neon</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -165,7 +165,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Raze"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Raze" IsChecked="True"></CheckBox>
                     <Label>Raze</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -173,7 +173,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Jett"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Jett" IsChecked="True"></CheckBox>
                     <Label>Jett</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -181,7 +181,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Phoenix"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Phoenix" IsChecked="True"></CheckBox>
                     <Label>Phoenix</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -189,7 +189,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Reyna"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Reyna" IsChecked="True"></CheckBox>
                     <Label>Reyna</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -197,7 +197,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Yoru"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Yoru" IsChecked="True"></CheckBox>
                     <Label>Yoru</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -206,9 +206,9 @@
 
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
-                    <CheckBox VerticalAlignment="Center" Name="Controller" Checked="cbController" Unchecked="cbController"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Controller" Checked="cbController" Unchecked="cbController" IsChecked="True"></CheckBox>
                     <Label></Label>
-                    <Image Source="pack://siteoforigin:,,,/Types/Controller.png" Width="20"/>
+                    <Image Source="pack://application:,,,/images/Types/Controller.png" Width="20"/>
                     <Label>Controller</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -216,7 +216,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Harbor"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Harbor" IsChecked="True"></CheckBox>
                     <Label>Harbor</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -224,7 +224,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Astra"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Astra" IsChecked="True"></CheckBox>
                     <Label>Astra</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -232,7 +232,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Brimstone"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Brimstone" IsChecked="True"></CheckBox>
                     <Label>Brimstone</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -240,7 +240,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Omen"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Omen" IsChecked="True"></CheckBox>
                     <Label>Omen</Label>
                 </StackPanel>
             </ListBoxItem>
@@ -248,7 +248,7 @@
             <ListBoxItem>
                 <StackPanel Orientation="Horizontal">
                     <Label></Label>
-                    <CheckBox VerticalAlignment="Center" Name="Viper"></CheckBox>
+                    <CheckBox VerticalAlignment="Center" Name="Viper" IsChecked="True"></CheckBox>
                     <Label>Viper</Label>
                 </StackPanel>
             </ListBoxItem>

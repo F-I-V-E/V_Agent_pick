@@ -7,6 +7,37 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="images\Agents\Astra.png" />
+    <None Remove="images\Agents\Breach.png" />
+    <None Remove="images\Agents\Brimstone.png" />
+    <None Remove="images\Agents\Chamber.png" />
+    <None Remove="images\Agents\Cypher.png" />
+    <None Remove="images\Agents\Deadlock.png" />
+    <None Remove="images\Agents\Fade.png" />
+    <None Remove="images\Agents\Gekko.png" />
+    <None Remove="images\Agents\Harbor.png" />
+    <None Remove="images\Agents\Iso.png" />
+    <None Remove="images\Agents\Jett.png" />
+    <None Remove="images\Agents\Kayo.png" />
+    <None Remove="images\Agents\Killjoy.png" />
+    <None Remove="images\Agents\Neon.png" />
+    <None Remove="images\Agents\Omen.png" />
+    <None Remove="images\Agents\Phoenix.png" />
+    <None Remove="images\Agents\Raze.png" />
+    <None Remove="images\Agents\Reyna.png" />
+    <None Remove="images\Agents\Sage.png" />
+    <None Remove="images\Agents\Skye.png" />
+    <None Remove="images\Agents\Sova.png" />
+    <None Remove="images\Agents\Viper.png" />
+    <None Remove="images\Agents\Yoru.png" />
+    <None Remove="images\icon.png" />
+    <None Remove="images\Types\Controller.png" />
+    <None Remove="images\Types\Duelist.png" />
+    <None Remove="images\Types\Initiator.png" />
+    <None Remove="images\Types\Sentinel.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -23,6 +54,37 @@
 
   <ItemGroup>
     <Folder Include="Resources\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\Agents\Astra.png" />
+    <Resource Include="images\Agents\Breach.png" />
+    <Resource Include="images\Agents\Brimstone.png" />
+    <Resource Include="images\Agents\Chamber.png" />
+    <Resource Include="images\Agents\Cypher.png" />
+    <Resource Include="images\Agents\Deadlock.png" />
+    <Resource Include="images\Agents\Fade.png" />
+    <Resource Include="images\Agents\Gekko.png" />
+    <Resource Include="images\Agents\Harbor.png" />
+    <Resource Include="images\Agents\Iso.png" />
+    <Resource Include="images\Agents\Jett.png" />
+    <Resource Include="images\Agents\Kayo.png" />
+    <Resource Include="images\Agents\Killjoy.png" />
+    <Resource Include="images\Agents\Neon.png" />
+    <Resource Include="images\Agents\Omen.png" />
+    <Resource Include="images\Agents\Phoenix.png" />
+    <Resource Include="images\Agents\Raze.png" />
+    <Resource Include="images\Agents\Reyna.png" />
+    <Resource Include="images\Agents\Sage.png" />
+    <Resource Include="images\Agents\Skye.png" />
+    <Resource Include="images\Agents\Sova.png" />
+    <Resource Include="images\Agents\Viper.png" />
+    <Resource Include="images\Agents\Yoru.png" />
+    <Resource Include="images\icon.png" />
+    <Resource Include="images\Types\Controller.png" />
+    <Resource Include="images\Types\Duelist.png" />
+    <Resource Include="images\Types\Initiator.png" />
+    <Resource Include="images\Types\Sentinel.png" />
   </ItemGroup>
 
 </Project>
