@@ -22,7 +22,11 @@ namespace V_Agent_pick
         public MainWindow()
         {
             InitializeComponent();
-            
+
+            sentinels = new CheckBox[] { Cypher, Deadlock, Killjoy, Sage, Chamber };
+            initiators = new CheckBox[] { Fade, Kayo, Skye, Sova, Breach, Gekko };
+            duelists = new CheckBox[] { Iso, Neon, Raze, Jett, Phoenix, Reyna, Yoru };
+            controllers = new CheckBox[] { Harbor, Astra, Brimstone, Omen, Viper };
         }
 
         private void UpdateCb(CheckBox[] cba, bool val)
@@ -36,34 +40,71 @@ namespace V_Agent_pick
             }
         }
 
+        private bool UpdateGrupCb(CheckBox[] cba)
+        {
+            bool check = false;
+            foreach (CheckBox cb in cba)
+            {
+                if ((bool)cb.IsChecked)
+                    check = true;
+                else
+                    return false;
+            }
+            return check;
+        }
+
+        //Sentinels--------------------------------------------------------------------------
         private void cbSentinels(object sender, RoutedEventArgs e)
         {
-            sentinels = new CheckBox[] { Cypher, Deadlock, Killjoy, Sage, Chamber };
             bool newVal = (Sentinels.IsChecked == true);
             UpdateCb(sentinels, newVal);
         }
 
+        private void cbAgentsSentinels_Click(object sender, RoutedEventArgs e)			//Sentinells alle Checked
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            Sentinels.IsChecked = UpdateGrupCb(sentinels);
+        }
+        //-----------------------------------------------------------------------------------
+        //Initiators-------------------------------------------------------------------------
         private void cbInitiators(object sender, RoutedEventArgs e)
         {
-            initiators = new CheckBox[] { Fade, Kayo, Skye, Sova, Breach, Gekko };
             bool newVal = (Initiators.IsChecked == true);
             UpdateCb(initiators, newVal);
         }
 
+        private void cbAgentsInitiators_Click(object sender, RoutedEventArgs e)			//Initiators alle Checked
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            Initiators.IsChecked = UpdateGrupCb(initiators);
+        }
+        //-----------------------------------------------------------------------------------
+        //Suelists---------------------------------------------------------------------------
         private void cbDuelists(object sender, RoutedEventArgs e)
         {
-            duelists = new CheckBox[] { Iso, Neon, Raze, Jett, Phoenix, Reyna, Yoru };
             bool newVal = (Duelists.IsChecked == true);
             UpdateCb(duelists, newVal);
         }
 
+        private void cbAgentsDuelists_Click(object sender, RoutedEventArgs e)			//Duelists alle Checked
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            Duelists.IsChecked = UpdateGrupCb(duelists);
+        }
+        //-----------------------------------------------------------------------------------
+        //Controler--------------------------------------------------------------------------
         private void cbController(object sender, RoutedEventArgs e)
         {
-            controllers = new CheckBox[] { Harbor, Astra, Brimstone, Omen, Viper };
             bool newVal = (Controller.IsChecked == true);
             UpdateCb(controllers, newVal);
         }
 
+        private void cbAgentsController_Click(object sender, RoutedEventArgs e)			//Controller alle Checked
+        {
+            CheckBox checkBox = (CheckBox)sender;
+            Controller.IsChecked = UpdateGrupCb(controllers);
+        }
+        //-----------------------------------------------------------------------------------
         private void btnSubmit(object sender, RoutedEventArgs e)
         {
             bool[] checkboxes = new bool[23];
