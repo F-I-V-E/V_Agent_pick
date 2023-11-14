@@ -40,7 +40,7 @@ namespace V_Agent_pick
             }
         }
 
-        private bool UpdateGrupCb(CheckBox[] cba)
+        private bool UpdateGroupCb(CheckBox[] cba)
         {
             bool check = false;
             foreach (CheckBox cb in cba)
@@ -53,59 +53,101 @@ namespace V_Agent_pick
             return check;
         }
 
-        //Sentinels--------------------------------------------------------------------------
+        /// <summary>
+        /// Updates all sentinel checkboxes when the 'SENTINEL' Checkbox is checked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbSentinels(object sender, RoutedEventArgs e)
         {
             bool newVal = (Sentinels.IsChecked == true);
             UpdateCb(sentinels, newVal);
         }
 
-        private void cbAgentsSentinels_Click(object sender, RoutedEventArgs e)			//Sentinells alle Checked
+        /// <summary>
+        /// Updates the 'SENTINELS' Checkbox when a sentinel is updated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbAgentsSentinels_Click(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            Sentinels.IsChecked = UpdateGrupCb(sentinels);
+            Sentinels.IsChecked = UpdateGroupCb(sentinels);
         }
-        //-----------------------------------------------------------------------------------
-        //Initiators-------------------------------------------------------------------------
+
+
+        /// <summary>
+        /// Updates all initiator checkboxes when the 'INITIATOR' Checkbox is checked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbInitiators(object sender, RoutedEventArgs e)
         {
             bool newVal = (Initiators.IsChecked == true);
             UpdateCb(initiators, newVal);
         }
 
-        private void cbAgentsInitiators_Click(object sender, RoutedEventArgs e)			//Initiators alle Checked
+        /// <summary>
+        /// Updates the 'INITIATORS' Checkbox when a initiator is updated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbAgentsInitiators_Click(object sender, RoutedEventArgs e)			
         {
             CheckBox checkBox = (CheckBox)sender;
-            Initiators.IsChecked = UpdateGrupCb(initiators);
+            Initiators.IsChecked = UpdateGroupCb(initiators);
         }
-        //-----------------------------------------------------------------------------------
-        //Suelists---------------------------------------------------------------------------
+
+        /// <summary>
+        /// Updates all duelist checkboxes when the 'DUELISTS' Checkbox is checked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbDuelists(object sender, RoutedEventArgs e)
         {
             bool newVal = (Duelists.IsChecked == true);
             UpdateCb(duelists, newVal);
         }
 
-        private void cbAgentsDuelists_Click(object sender, RoutedEventArgs e)			//Duelists alle Checked
+        /// <summary>
+        /// Updates the 'DUELIST' Checkbox when a duelist is updated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbAgentsDuelists_Click(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            Duelists.IsChecked = UpdateGrupCb(duelists);
+            Duelists.IsChecked = UpdateGroupCb(duelists);
         }
-        //-----------------------------------------------------------------------------------
-        //Controler--------------------------------------------------------------------------
+
+        /// <summary>
+        /// Updates all controller checkboxes when the 'CONTROLLER' Checkbox is checked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void cbController(object sender, RoutedEventArgs e)
         {
             bool newVal = (Controller.IsChecked == true);
             UpdateCb(controllers, newVal);
         }
 
-        private void cbAgentsController_Click(object sender, RoutedEventArgs e)			//Controller alle Checked
+        /// <summary>
+        /// Updates the 'CONTROLLER' Checkbox when a controller is updated
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void cbAgentsController_Click(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            Controller.IsChecked = UpdateGrupCb(controllers);
+            Controller.IsChecked = UpdateGroupCb(controllers);
         }
-        //-----------------------------------------------------------------------------------
-        private void btnSubmit(object sender, RoutedEventArgs e)
+
+        /// <summary>
+        /// Creates arrays for all checkboxes and initializes the agents array for randomization
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void generateArrays(object sender, RoutedEventArgs e)
         {
             bool[] checkboxes = new bool[23];
 
@@ -142,6 +184,10 @@ namespace V_Agent_pick
             initializeAgents(checkboxes);
         }
 
+        /// <summary>
+        /// initializes the agents array for randomization
+        /// </summary>
+        /// <param name="c">Bool array which states if checkboxes are checked</param>
         private void initializeAgents(bool[] c)
         {
             int count = 0;
@@ -160,9 +206,14 @@ namespace V_Agent_pick
                 }
             }
         }
+        /// <summary>
+        /// randomizes the agent and displays the picture
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnRandomize(object sender, RoutedEventArgs e)
         {
-            btnSubmit(sender, e);
+            generateArrays(sender, e);
             if (agents.Length > 0)
             {
                 Random random = new Random();
