@@ -29,6 +29,11 @@ namespace V_Agent_pick
             controllers = new CheckBox[] { Harbor, Astra, Brimstone, Omen, Viper };
         }
 
+        /// <summary>
+        /// Sets an array of checkboxes to a new value
+        /// </summary>
+        /// <param name="cba">array of checkboxes</param>
+        /// <param name="val">new bool value for the checkboxes</param>
         private void UpdateCb(CheckBox[] cba, bool val)
         {
             if (this.IsLoaded)
@@ -40,7 +45,12 @@ namespace V_Agent_pick
             }
         }
 
-        private bool UpdateGroupCb(CheckBox[] cba)
+        /// <summary>
+        /// checks if a checkbox array is fully true
+        /// </summary>
+        /// <param name="cba">checkbox array</param>
+        /// <returns>checkbox array true?</returns>
+        private bool CheckCheckboxArray(CheckBox[] cba)
         {
             bool check = false;
             foreach (CheckBox cb in cba)
@@ -72,7 +82,7 @@ namespace V_Agent_pick
         private void cbAgentsSentinels_Click(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            Sentinels.IsChecked = UpdateGroupCb(sentinels);
+            Sentinels.IsChecked = CheckCheckboxArray(sentinels);
         }
 
 
@@ -95,7 +105,7 @@ namespace V_Agent_pick
         private void cbAgentsInitiators_Click(object sender, RoutedEventArgs e)			
         {
             CheckBox checkBox = (CheckBox)sender;
-            Initiators.IsChecked = UpdateGroupCb(initiators);
+            Initiators.IsChecked = CheckCheckboxArray(initiators);
         }
 
         /// <summary>
@@ -117,7 +127,7 @@ namespace V_Agent_pick
         private void cbAgentsDuelists_Click(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            Duelists.IsChecked = UpdateGroupCb(duelists);
+            Duelists.IsChecked = CheckCheckboxArray(duelists);
         }
 
         /// <summary>
@@ -139,7 +149,7 @@ namespace V_Agent_pick
         private void cbAgentsController_Click(object sender, RoutedEventArgs e)
         {
             CheckBox checkBox = (CheckBox)sender;
-            Controller.IsChecked = UpdateGroupCb(controllers);
+            Controller.IsChecked = CheckCheckboxArray(controllers);
         }
 
         /// <summary>
