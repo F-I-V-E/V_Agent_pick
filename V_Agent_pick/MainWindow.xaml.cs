@@ -18,7 +18,7 @@ namespace V_Agent_pick
         CheckBox[] controllers;
 
         int agents;
-        bool[] checkboxes = new bool[agentsComplete.Length];
+        bool[] checkboxes;
 
         public MainWindow()
         {
@@ -160,7 +160,7 @@ namespace V_Agent_pick
         /// <param name="e"></param>
         private void generateArrays(object sender, RoutedEventArgs e)
         {
-            
+            checkboxes = new bool[agentsComplete.Length];
 
             checkboxes[0] = Cypher.IsChecked == true;
             checkboxes[1] = Deadlock.IsChecked == true;
@@ -201,6 +201,7 @@ namespace V_Agent_pick
         /// <param name="c">Bool array which states if checkboxes are checked</param>
         private void initializeAgents(bool[] c)
         {
+
             agents = 0;
             for (int i = 0; i < c.Length; i++)
                 if (c[i]) agents++;
