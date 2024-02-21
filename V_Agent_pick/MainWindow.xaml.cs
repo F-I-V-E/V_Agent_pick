@@ -18,7 +18,7 @@ namespace V_Agent_pick
         CheckBox[] controllers;
 
         int agents;
-        bool[] checkboxes = new bool[23];
+        bool[] checkboxes = new bool[agentsComplete.Length];
 
         public MainWindow()
         {
