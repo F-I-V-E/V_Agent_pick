@@ -17,7 +17,8 @@ namespace V_Agent_pick
         CheckBox[] duelists;
         CheckBox[] controllers;
 
-        string[] agents;
+        int agents;
+        bool[] checkboxes = new bool[23];
 
         public MainWindow()
         {
@@ -159,7 +160,7 @@ namespace V_Agent_pick
         /// <param name="e"></param>
         private void generateArrays(object sender, RoutedEventArgs e)
         {
-            bool[] checkboxes = new bool[23];
+            
 
             checkboxes[0] = Cypher.IsChecked == true;
             checkboxes[1] = Deadlock.IsChecked == true;
@@ -200,21 +201,10 @@ namespace V_Agent_pick
         /// <param name="c">Bool array which states if checkboxes are checked</param>
         private void initializeAgents(bool[] c)
         {
-            int count = 0;
+            agents = 0;
             for (int i = 0; i < c.Length; i++)
-            {
-                if (c[i]) count++;
-            }
-            agents = new string[count];
-            int f = 0;
-            for (int i = 0; i < c.Length; i++)
-            {
-                if (c[i])
-                {
-                    agents[f] = agentsComplete[i];
-                    f++;
-                }
-            }
+                if (c[i]) agents++;
+            
         }
         /// <summary>
         /// randomizes the agent and displays the picture
@@ -224,13 +214,33 @@ namespace V_Agent_pick
         private void btnRandomize(object sender, RoutedEventArgs e)
         {
             generateArrays(sender, e);
-            if (agents.Length > 0)
+            if (agents > 0)
             {
-                Random random = new Random();
-                int selection = random.Next(0, agents.Length);
-                Uri uri = new Uri(String.Format("pack://application:,,,/images/Agents/{0}.png", agents[selection]));
+                int selection = new Random().Next(0, agents);
+                convertNumber(ref selection);
+                Uri uri = new Uri(String.Format($"pack://application:,,,/images/Agents/{agentsComplete[selection]}.png"));
+                lbl_Agent_Name.Content = agentsComplete[selection];
                 imgAgent.Source = new BitmapImage(uri);
+                //this.Title = agents[selection];
+                //this.Icon = new BitmapImage(new Uri($"pack://application:,,,/images/Types/{getAgentType(selection)}.png"));
             }
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="selection"></param>
+        private void convertNumber(ref int selection)
+        {
+            for (int i = 0; i < selection; i++)
+                if (!checkboxes[i]) selection++;
+        }
+        private string getAgentType(int selection)
+        {
+            int con = agentsComplete.Length - controllers.Length;
+            int due = con - duelists.Length;
+            int ini = due - initiators.Length;
+
+            return selection - con > 0 ? "Controller" : selection - due > 0 ? "Duelist" : selection - ini > 0 ? "Initiator" : "Sentinel";
         }
     }
 }

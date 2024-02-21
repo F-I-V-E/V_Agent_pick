@@ -24,6 +24,7 @@
         <!--ELEMENTS-->
         <Button Grid.Column="0" Grid.Row="1" Click="btnRandomize" Background="#FFC7C7C7">Randomize</Button>
 
+        <Label Content="" Grid.Row="0" Grid.Column="0" x:Name="lbl_Agent_Name"/>
         <Image Grid.Column="0" Grid.Row="0" Name="imgAgent"/>
 
         <ListBox Grid.RowSpan="2" Grid.Column="1" Background="#FFC7C7C7">
