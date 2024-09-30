@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -10,24 +12,45 @@ namespace V_Agent_pick
     /// </summary>
     public partial class MainWindow : Window
     {
-        string[] agentsComplete = new string[] { "Cypher", "Deadlock", "Killjoy", "Sage", "Chamber", "Fade", "Kayo", "Skye", "Sova", "Breach", "Gekko", "Iso", "Neon", "Raze", "Jett", "Phoenix", "Reyna", "Yoru", "Harbor", "Astra", "Brimstone", "Omen", "Viper" };
+        int agentsCount = 0;
+        private AgentList agents = new AgentList();
+        //string[] agentsComplete = new string[] { "Cypher", "Deadlock", "Killjoy", "Sage", "Chamber", "Vyse", "Fade", "Kayo", "Skye", "Sova", "Breach", "Gekko", "Iso", "Neon", "Raze", "Jett", "Phoenix", "Reyna", "Yoru", "Harbor", "Astra", "Brimstone", "Omen", "Viper", "Clove"};
+        string[] agentsComplete;
+
 
         CheckBox[] sentinels;
         CheckBox[] initiators;
         CheckBox[] duelists;
         CheckBox[] controllers;
 
-        int agents;
+        
         bool[] checkboxes;
 
         public MainWindow()
         {
             InitializeComponent();
+            ApplyAgentCheckboxes();
+        }
 
-            sentinels = new CheckBox[] { Cypher, Deadlock, Killjoy, Sage, Chamber };
+        public void ApplyAgentCheckboxes()
+        {
+            sentinels = new CheckBox[] { Cypher, Deadlock, Killjoy, Sage, Chamber, Vyse };
             initiators = new CheckBox[] { Fade, Kayo, Skye, Sova, Breach, Gekko };
             duelists = new CheckBox[] { Iso, Neon, Raze, Jett, Phoenix, Reyna, Yoru };
-            controllers = new CheckBox[] { Harbor, Astra, Brimstone, Omen, Viper };
+            controllers = new CheckBox[] { Harbor, Astra, Brimstone, Omen, Viper, Clove };
+
+            CheckBox[] checkboxesComplete = sentinels.Concat(initiators).Concat(duelists).Concat(controllers).ToArray();
+            agentsComplete = new string[agents.getLength()];
+
+            for (int i = 0; i < agentsComplete.Length; i++)
+            {
+                agentsComplete[i] = agents[i].Name;
+            }
+
+            for (int i = 0; i < agentsComplete.Length; i++)
+            {
+                agents.setCheckBox(checkboxesComplete[i], agentsComplete[i]);
+            }
         }
 
         /// <summary>
@@ -82,7 +105,6 @@ namespace V_Agent_pick
         /// <param name="e"></param>
         private void cbAgentsSentinels_Click(object sender, RoutedEventArgs e)
         {
-            CheckBox checkBox = (CheckBox)sender;
             Sentinels.IsChecked = CheckCheckboxArray(sentinels);
         }
 
@@ -160,37 +182,60 @@ namespace V_Agent_pick
         /// <param name="e"></param>
         private void generateArrays(object sender, RoutedEventArgs e)
         {
+
             checkboxes = new bool[agentsComplete.Length];
 
-            checkboxes[0] = Cypher.IsChecked == true;
+            for (int i = 0; i < sentinels.Length; i++)
+            {
+                checkboxes[i] = sentinels[i].IsChecked == true;
+            }
+
+            for (int i = 0; i < initiators.Length; i++)
+            {
+                checkboxes[i+sentinels.Length] = sentinels[i].IsChecked == true;
+            }
+
+            for (int i = 0; i < duelists.Length; i++)
+            {
+                checkboxes[i + sentinels.Length + initiators.Length] = duelists[i].IsChecked == true;
+            }
+
+            for (int i = 0; i < controllers.Length; i++)
+            {
+                checkboxes[i + sentinels.Length + initiators.Length + duelists.Length] = controllers[i].IsChecked == true;
+            }
+
+/*            checkboxes[0] = Cypher.IsChecked == true;
             checkboxes[1] = Deadlock.IsChecked == true;
             checkboxes[2] = Killjoy.IsChecked == true;
             checkboxes[3] = Sage.IsChecked == true;
             checkboxes[4] = Chamber.IsChecked == true;
+            checkboxes[5] = Vyse.IsChecked == true;
 
 
-            checkboxes[5] = Fade.IsChecked == true;
-            checkboxes[6] = Kayo.IsChecked == true;
-            checkboxes[7] = Skye.IsChecked == true;
-            checkboxes[8] = Sova.IsChecked == true;
-            checkboxes[9] = Breach.IsChecked == true;
-            checkboxes[10] = Gekko.IsChecked == true;
+            checkboxes[6] = Fade.IsChecked == true;
+            checkboxes[7] = Kayo.IsChecked == true;
+            checkboxes[8] = Skye.IsChecked == true;
+            checkboxes[9] = Sova.IsChecked == true;
+            checkboxes[10] = Breach.IsChecked == true;
+            checkboxes[11] = Gekko.IsChecked == true;
 
 
-            checkboxes[11] = Iso.IsChecked == true;
-            checkboxes[12] = Neon.IsChecked == true;
-            checkboxes[13] = Raze.IsChecked == true;
-            checkboxes[14] = Jett.IsChecked == true;
-            checkboxes[15] = Phoenix.IsChecked == true;
-            checkboxes[16] = Reyna.IsChecked == true;
-            checkboxes[17] = Yoru.IsChecked == true;
+            checkboxes[12] = Iso.IsChecked == true;
+            checkboxes[13] = Neon.IsChecked == true;
+            checkboxes[14] = Raze.IsChecked == true;
+            checkboxes[15] = Jett.IsChecked == true;
+            checkboxes[16] = Phoenix.IsChecked == true;
+            checkboxes[17] = Reyna.IsChecked == true;
+            checkboxes[18] = Yoru.IsChecked == true;
 
 
-            checkboxes[18] = Harbor.IsChecked == true;
-            checkboxes[19] = Astra.IsChecked == true;
-            checkboxes[20] = Brimstone.IsChecked == true;
-            checkboxes[21] = Omen.IsChecked == true;
-            checkboxes[22] = Viper.IsChecked == true;
+            checkboxes[19] = Harbor.IsChecked == true;
+            checkboxes[20] = Astra.IsChecked == true;
+            checkboxes[21] = Brimstone.IsChecked == true;
+            checkboxes[22] = Omen.IsChecked == true;
+            checkboxes[23] = Viper.IsChecked == true;
+            checkboxes[24] = Clove.IsChecked == true;*/
 
             initializeAgents(checkboxes);
         }
@@ -201,11 +246,9 @@ namespace V_Agent_pick
         /// <param name="c">Bool array which states if checkboxes are checked</param>
         private void initializeAgents(bool[] c)
         {
-
-            agents = 0;
+            agentsCount = 0;
             for (int i = 0; i < c.Length; i++)
-                if (c[i]) agents++;
-            
+                if (c[i]) agentsCount++;
         }
         /// <summary>
         /// randomizes the agent and displays the picture
@@ -215,13 +258,12 @@ namespace V_Agent_pick
         private void btnRandomize(object sender, RoutedEventArgs e)
         {
             generateArrays(sender, e);
-            if (agents > 0)
+            if (agentsCount > 0)
             {
-                int selection = new Random().Next(0, agents);
+                int selection = new Random().Next(0, agentsCount);
                 convertNumber(ref selection);
-                Uri uri = new Uri(String.Format($"pack://application:,,,/images/Agents/{agentsComplete[selection]}.png"));
-                lbl_Agent_Name.Content = agentsComplete[selection];
-                imgAgent.Source = new BitmapImage(uri);
+                lbl_Agent_Name.Content = agents[selection].Name;
+                imgAgent.Source = agents[selection].agentImage;
                 //this.Title = agents[selection];
                 //this.Icon = new BitmapImage(new Uri($"pack://application:,,,/images/Types/{getAgentType(selection)}.png"));
             }
@@ -234,14 +276,6 @@ namespace V_Agent_pick
         {
             for (int i = 0; i < selection; i++)
                 if (!checkboxes[i]) selection++;
-        }
-        private string getAgentType(int selection)
-        {
-            int con = agentsComplete.Length - controllers.Length;
-            int due = con - duelists.Length;
-            int ini = due - initiators.Length;
-
-            return selection - con > 0 ? "Controller" : selection - due > 0 ? "Duelist" : selection - ini > 0 ? "Initiator" : "Sentinel";
         }
     }
 }

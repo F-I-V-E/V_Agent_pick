@@ -19,7 +19,7 @@ namespace V_Agent_pick.Properties {
     // -Klasse über ein Tool wie ResGen oder Visual Studio automatisch generiert.
     // Um einen Member hinzuzufügen oder zu entfernen, bearbeiten Sie die .ResX-Datei und führen dann ResGen
     // mit der /str-Option erneut aus, oder Sie erstellen Ihr VS-Projekt neu.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -103,9 +103,9 @@ namespace V_Agent_pick.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
         /// </summary>
-        internal static byte[] Controller {
+        internal static byte[] Clove {
             get {
-                object obj = ResourceManager.GetObject("Controller", resourceCulture);
+                object obj = ResourceManager.GetObject("Clove", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -126,16 +126,6 @@ namespace V_Agent_pick.Properties {
         internal static byte[] Deadlock {
             get {
                 object obj = ResourceManager.GetObject("Deadlock", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        /// </summary>
-        internal static byte[] Duelist {
-            get {
-                object obj = ResourceManager.GetObject("Duelist", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -166,16 +156,6 @@ namespace V_Agent_pick.Properties {
         internal static byte[] Harbor {
             get {
                 object obj = ResourceManager.GetObject("Harbor", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        /// </summary>
-        internal static byte[] Initiator {
-            get {
-                object obj = ResourceManager.GetObject("Initiator", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -283,16 +263,6 @@ namespace V_Agent_pick.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
         /// </summary>
-        internal static byte[] Sentinel {
-            get {
-                object obj = ResourceManager.GetObject("Sentinel", resourceCulture);
-                return ((byte[])(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
-        /// </summary>
         internal static byte[] Skye {
             get {
                 object obj = ResourceManager.GetObject("Skye", resourceCulture);
@@ -316,6 +286,16 @@ namespace V_Agent_pick.Properties {
         internal static byte[] Viper {
             get {
                 object obj = ResourceManager.GetObject("Viper", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] Vyse {
+            get {
+                object obj = ResourceManager.GetObject("Vyse", resourceCulture);
                 return ((byte[])(obj));
             }
         }

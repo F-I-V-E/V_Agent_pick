@@ -130,17 +130,14 @@
   <data name="Chamber" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Chamber.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Controller" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Types\Controller.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Clove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Agents\Clove.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Cypher" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Cypher.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Deadlock" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Deadlock.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Duelist" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Types\Duelist.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Fade" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Fade.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -150,9 +147,6 @@
   </data>
   <data name="Harbor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Harbor.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="Initiator" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Types\Initiator.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Iso" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Iso.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -184,9 +178,6 @@
   <data name="Sage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Sage.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Sentinel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\images\Types\Sentinel.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Skye" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Skye.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -195,6 +186,9 @@
   </data>
   <data name="Viper" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Viper.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Vyse" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\images\Agents\Vyse.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Yoru" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\images\Agents\Yoru.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

@@ -14,6 +14,7 @@
     <None Remove="images\Agents\Breach.png" />
     <None Remove="images\Agents\Brimstone.png" />
     <None Remove="images\Agents\Chamber.png" />
+	<None Remove="images\Agents\Clove.png" />
     <None Remove="images\Agents\Cypher.png" />
     <None Remove="images\Agents\Deadlock.png" />
     <None Remove="images\Agents\Fade.png" />
@@ -32,6 +33,7 @@
     <None Remove="images\Agents\Skye.png" />
     <None Remove="images\Agents\Sova.png" />
     <None Remove="images\Agents\Viper.png" />
+	<None Remove="images\Agents\Vyse.png"/>
     <None Remove="images\Agents\Yoru.png" />
     <None Remove="images\icon.png" />
     <None Remove="images\Types\Controller.png" />
@@ -64,6 +66,7 @@
     <Resource Include="images\Agents\Breach.png" />
     <Resource Include="images\Agents\Brimstone.png" />
     <Resource Include="images\Agents\Chamber.png" />
+	<Resource Include="images\Agents\Clove.png" />
     <Resource Include="images\Agents\Cypher.png" />
     <Resource Include="images\Agents\Deadlock.png" />
     <Resource Include="images\Agents\Fade.png" />
@@ -82,6 +85,7 @@
     <Resource Include="images\Agents\Skye.png" />
     <Resource Include="images\Agents\Sova.png" />
     <Resource Include="images\Agents\Viper.png" />
+	<Resource Include="images\Agents\Vyse.png" />
     <Resource Include="images\Agents\Yoru.png" />
     <Resource Include="images\icon.png" />
     <Resource Include="images\Types\Controller.png" />

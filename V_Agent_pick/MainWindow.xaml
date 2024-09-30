@@ -71,6 +71,13 @@
                 </StackPanel>
             </ListBoxItem>
 
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox VerticalAlignment="Center" Name="Vyse" Click="cbAgentsSentinels_Click" IsChecked="True" Margin="15,0,0,0"></CheckBox>
+                    <Label>Vyse</Label>
+                </StackPanel>
+            </ListBoxItem>
+
 
 
             <ListBoxItem>
@@ -224,6 +231,13 @@
                 <StackPanel Orientation="Horizontal">
                     <CheckBox VerticalAlignment="Center" Name="Viper" Click="cbAgentsController_Click" IsChecked="True" Margin="15,0,0,0"></CheckBox>
                     <Label>Viper</Label>
+                </StackPanel>
+            </ListBoxItem>
+
+            <ListBoxItem>
+                <StackPanel Orientation="Horizontal">
+                    <CheckBox VerticalAlignment="Center" Name="Clove" Click="cbAgentsController_Click" IsChecked="True" Margin="15,0,0,0"></CheckBox>
+                    <Label>Clove</Label>
                 </StackPanel>
             </ListBoxItem>
 
